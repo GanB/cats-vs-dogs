@@ -1,6 +1,9 @@
 # cats-vs-dogs
 For this group project, we’re going to use all our Vanilla JavaScript skills and create a website that allows users to choose which image is better, the dog image or the cat image.  
 
+![catsVSdogs](https://user-images.githubusercontent.com/85176043/193941094-e6c6f8e6-8663-4aab-a621-cd485158d66c.jpg)
+
+
 ### Requirements
 
 - Display a random dog image next to a random cat image
