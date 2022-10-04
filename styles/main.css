@@ -1,0 +1,175 @@
+/* @import "./mariana.css"; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    flex-wrap: wrap;
+}
+body {
+   /*  background-color: #161616; */
+    background-color: #302d3f;
+/*     background-image:url("/images/Background.jpg");
+    background-repeat:no-repeat;
+    background-size: cover; */
+    display: flex;
+    justify-content: center;
+}
+.tables_style {
+    display: flex;
+    display: inline-block;
+    width: 50%;
+}
+.style {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 1px solid #ffc72d;
+    align-items: flex-end;
+    max-height: 600px;
+    padding: 20px;
+    background-color: #e3e3e3;
+    box-shadow: #ad4723 2px 2px 5px;
+    border-radius: 50px 50px 0px 0px;
+    margin-top: 50px;
+    position: relative;
+   /*  margin-bottom: 50px; */
+    z-index: -2;
+}
+
+
+.topBorder {
+    display: flex;
+   
+/*     height: 200px; */
+    background-color: #d9d9d9;
+    justify-content: center;
+    /* background-color: #812929; */
+} 
+
+
+.imgBorder{
+    height:200px ;
+/*     margin-left: 30%;
+    margin-top: 30px; */
+    padding: 5px;
+    border: 2px solid #ffc72d;
+    margin: 30px;
+}
+.text{
+    border: #050503 1px solid;
+    font-size: 30px;
+    margin: 30px;
+    padding: 20px;
+}
+
+.border {
+    /* background-color:#B35E3D ;*/
+   /*  background-color: #ad4723; vvv*/
+    border-radius: 50px 50px 0px 0px;
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 60px;
+    position: absolute;
+    border: 1px solid #ad4723;
+    box-shadow: #ad4723 2px 0px 5px;
+    z-index: -1;
+}
+
+.teamName {
+    color: #f7f7f7;
+    font-family: "Oswald", Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    line-height: 53px;
+    margin-left: 10%;
+    font-weight: 100;
+}
+
+
+
+
+.footer {
+    width: 100vw;
+    height: 70px;
+    background-color: #80625b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* --sticky navbar-- */
+    position: sticky;
+    bottom: 0%;
+    margin-top: 50px;
+}
+.copyright {
+    height: 50px;
+    padding: 10px;
+    bottom: 0px;
+}
+.iconify {
+    font-size: 50px;
+    padding: 10p;
+}
+
+
+/*   .table {
+      color: brown;
+      min-height: 400px;
+      min-width: 300px;
+      max-width: 400px;
+      margin-top: 100px;
+      padding: 30px;
+      font-size: 20px;
+      font-family: "Arial Narrow", Arial, sans-serif, monospace;
+      background-color: #f7f7f7;
+      box-shadow: #c7c0be 2px 2px 5px;
+      border-radius: 3px;
+      justify-content: center;
+  } */
+  
+.sideBorder{
+    border:2px solid #c7c0be;
+    width:300px;
+    height:100%;
+    margin-left: 20px;
+
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    border: 1px solid #ffc72d;
+    align-items: flex-end;
+   /*  min-height: 500px; */
+    padding: 20px;
+    background-color: #e3e3e3;
+    box-shadow: #ad4723 2px 2px 5px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-bottom: 150px;
+/*     position: relative; */
+    z-index: -2;
+
+}
+.img{
+    border:#04021d 1px solid;
+    height: 200px;
+    width: 200px;
+    
+    margin-top: 60px;
+}
+
+.E{
+    background-color:#295383;
+}
+.M{
+    background-color:#B6B95E ;
+}
+.G{
+    background-color: #14AAC2 ;
+}
+.D{
+    background-color:#b64159 ;
+}
+.T{
+    background-color: #73b965;
+}
