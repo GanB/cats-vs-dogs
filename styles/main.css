@@ -30,7 +30,7 @@ body {
     padding: 20px;
     background-color: #e3e3e3;
     box-shadow: #ad4723 2px 2px 5px;
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 50px 0px 0px 0px;
     margin-top: 50px;
     position: relative;
    /*  margin-bottom: 50px; */
@@ -63,10 +63,16 @@ body {
     padding: 20px;
 }
 
+.Mbutton{
+    margin: 20px;
+    padding: 20px;
+    background-color: #ad4723;
+}
+
 .border {
     /* background-color:#B35E3D ;*/
    /*  background-color: #ad4723; vvv*/
-    border-radius: 50px 50px 0px 0px;
+    border-radius: 50px 0px 0px 0px;
     display: flex;
     align-items: center;
     width: 50%;
@@ -168,7 +174,7 @@ body {
     background-color: #14AAC2 ;
 }
 .D{
-    background-color:#b64159 ;
+    background-color:#c25067 ;
 }
 .T{
     background-color: #73b965;
