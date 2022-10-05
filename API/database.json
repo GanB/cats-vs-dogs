@@ -1,0 +1,18 @@
+{
+    "scoreCard": [
+        {
+            "countDog": 5,
+            "countCat": 6,
+            "id": 1
+        }
+    ],
+    
+    "winners": [
+        {
+            "url": "https://cdn2.thecatapi.com/images/55p.jpg",
+            "type": "cat",
+            "votes": 2,
+            "id": 1
+        }
+    ]
+}
