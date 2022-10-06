@@ -1,18 +1,31 @@
-const CatAPI = "https://cdn2.thecatapi.com/images/L-aDi29wP.jpg";
-//https://api.thecatapi.com/v1/images/search
-const DogAPI = "https://cdn2.thedogapi.com/images/ZfQGth6-x.jpg";
-//https://api.thedogapi.com/v1/images/search
-
-const applicationState = {
-    cats: [],
-    dogs: [],
-};
-/*-----cats------*/
-export const fetchCats = async () => {
-        const dataFetch = await fetch(`{CatAPI}`);
-        const cats = await dataFetch.json();
-        applicationState.cats = cats
-}
+import { fetchCats } from "./mariana_main.js";
+import { fetchDogs } from "./mariana_main.js";
+/* -----------------Cats--------------------- */
 const displayCats = async () => {
-        let catImage = cats
-}
+    const cats = await fetchCats();
+    renderCats(cats);
+};
+
+let renderCats = (cats) => {
+    console.log(cats);
+    let html = ``;
+    html = 
+    `<img class="image" src= ${cats[0].url} alt="">`;
+    document.getElementById("m1").innerHTML = html;
+};
+displayCats();
+
+/* -----------------Dogs--------------------- */
+const displayDogs = async () => {
+    const dogs = await fetchDogs();
+    renderDogs(dogs);
+};
+
+let renderDogs = (dogs) => {
+    console.log(dogs);
+    let html = ``;
+    html = `
+    <img style="height:200px; width:200px" src= ${dogs[0].url} alt="">`;
+    document.getElementById("m2").innerHTML = html;
+};
+displayDogs();
