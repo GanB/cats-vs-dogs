@@ -1,3 +1,5 @@
+/* @import "./mariana.css"; */
+@import url("ethan.css");
 * {
     padding: 0;
     margin: 0;
@@ -27,7 +29,8 @@ body {
     border-radius: 50px 0px 0px 0px;
     margin-top: 50px;
     position: relative;
-    /* z-index: -3; */
+   /*  margin-bottom: 50px; */
+    /* z-index: 2; */
 }
 
 .topBorder {
@@ -115,7 +118,7 @@ body {
     border-radius: 5px;
     margin-top: 50px;
     margin-bottom: 150px;
-    z-index: -2;
+    z-index: 2;
 }
 .img {
     border: #04021d 1px solid;
@@ -153,3 +156,36 @@ body {
 .T {
     background-color: #73b965;
 }
+
+
+/* 
+.container {
+  position: relative;
+  width: 50%;
+  max-width: 300px;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1; 
+  width: 100%;
+  transition: .5s ease;
+  opacity:0;
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+.container:hover .overlay {
+  opacity: 1;
+} */

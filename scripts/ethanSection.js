@@ -1,5 +1,13 @@
 import { apiCat, apiDog } from "./dataAccess.js"
 
+const mainContainer = document.querySelector("#ethan")  
+
+mainContainer.addEventListener("click", clickEvent => {
+   if(clickEvent.target.id === "ethan--cat") {
+      console.log("what the fuck")
+   }
+})
+
 const appState = {
    scoreCard: [],
    winners: [],
@@ -28,32 +36,32 @@ const getDogApiState = () => {
 }
 
 const catImgFunc = (cat) => {
-   let html = `<img src="${cat.url}" alt="cat image its random idk" width="200" height="200">`
+   let html = `<a id="ethan--cat"><img id="cat-img" src="${cat.url}" alt="cat image its random idk"></a>`
    return html
 }
 
 const dogImgFunc = (dog) => {
-   let html = `<img src="${dog.url}" alt="dog image its random idk" width="200" height="200">`
+   let html = `<img id="dog-img" src="${dog.url}" alt="dog image its random idk">`
    return html
 }
 
 const renderCatImg = () => {
    const catImg = getCatApiState()
-   let html = `<a id="vote-click">${catImg.map(catImgFunc)}</a>`
+   let html = catImg.map(catImgFunc)
    return html
 }
 
 const renderDogImg = () => {
    const dogImg = getDogApiState()
-   let html = `<a id="vote-click">${dogImg.map(dogImgFunc)}</a>`
+   let html = dogImg.map(dogImgFunc)
    return html
 }
 
 const renderAll = async () => {
    await fetchCat()
    await fetchDog()
-   document.querySelector("#cat-img").innerHTML = renderCatImg()
-   document.querySelector('#dog-img').innerHTML = renderDogImg()   
+   document.querySelector('#ethan-cat').innerHTML = renderCatImg()
+   document.querySelector("#ethan-dog").innerHTML = renderDogImg()
 }
 
 renderAll()
