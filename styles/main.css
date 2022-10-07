@@ -1,3 +1,5 @@
+/* @import "./mariana.css"; */
+@import url("ethan.css");
 * {
     padding: 0;
     margin: 0;
@@ -27,7 +29,8 @@ body {
     border-radius: 50px 0px 0px 0px;
     margin-top: 50px;
     position: relative;
-    z-index: -2;
+   /*  margin-bottom: 50px; */
+    /* z-index: 2; */
 }
 
 .topBorder {
@@ -64,7 +67,7 @@ body {
     position: absolute;
     border: 1px solid #ad4723;
     box-shadow: #ad4723 2px 0px 5px;
-    z-index: -1;
+    z-index: 2;
 }
 
 .teamName {
@@ -115,7 +118,7 @@ body {
     border-radius: 5px;
     margin-top: 50px;
     margin-bottom: 150px;
-    z-index: -2;
+    z-index: 2;
 }
 .img {
     border: #04021d 1px solid;
