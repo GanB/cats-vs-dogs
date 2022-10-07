@@ -27,7 +27,7 @@ body {
     border-radius: 50px 0px 0px 0px;
     margin-top: 50px;
     position: relative;
-    z-index: -2;
+    /* z-index: -3; */
 }
 
 .topBorder {
@@ -64,7 +64,7 @@ body {
     position: absolute;
     border: 1px solid #ad4723;
     box-shadow: #ad4723 2px 0px 5px;
-    z-index: -1;
+    z-index: 2;
 }
 
 .teamName {
@@ -127,6 +127,8 @@ body {
     height: 200px;
     width: 200px;
 }
+
+
 /* .image:hover {
     height: 250px;
     width: 250px;
