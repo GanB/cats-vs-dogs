@@ -164,6 +164,12 @@ body {
     margin-top: 60px;
 }
 
+.image {
+    height: 200px;
+    width: 200px;
+}
+
+
 .E{
     background-color:#295383;
 }
