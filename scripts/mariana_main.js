@@ -1,24 +1,33 @@
 const apiCatM = "https://api.thecatapi.com/v1/images/search";
 const apiDogM = "https://api.thedogapi.com/v1/images/search";
+//const apiWinner = "http://localhost:5010/winners";
 
 export const applicationState = {
     scoreCard: [],
     winners: [],
-    apiCatMM: [],
-    apiDogM: [],
+    apiCat: [],
+    apiDog: [],
 };
 // import { apiCatM } from "./dataAccess";
 // import { apiDogM } from "./dataAccess";
 //import {applicationState } from "./dataAccess"
+
+/* ----------------------CATS---------------------- */
 /*-----cats------*/
 export const fetchCats = async () => {
     const dataFetch = await fetch(`${apiCatM}`);
-    console.log(dataFetch);
+    const responseCats = await dataFetch.json();
+    return responseCats;
+};
+
+/*-----Winner--cats------*/
+export const fetchWCats = async () => {
+    const dataFetch = await fetch(`${apiWinner}`);
     const responseCats = await dataFetch.json();
     console.log(responseCats);
     return responseCats;
 };
-
+/* ----------------------DOGS---------------------- */
 /*-----dogs------*/
 export const fetchDogs = async () => {
     const dataFetch = await fetch(`${apiDogM}`);
@@ -27,10 +36,18 @@ export const fetchDogs = async () => {
     console.log(responseDogs);
     return responseDogs;
 };
+/*-----Winner--dogs------*/
+export const fetchWDogs = async () => {
+    const dataFetch = await fetch(`${apiWinner}`);
+    const responseDogs = await dataFetch.json();
+    return responseDogs;
+};
+/* ----------------------------------------------- */
+
 /* --------Winner----- */
 const apiWinner = "http://localhost:5010/winners";
 
-/* export  */ const addWinner = async (newWinner) => {
+export  const addWinner = async (newWinner) => {
     const fetchOptions = {
         method: "POST",
         headers: {
@@ -43,76 +60,9 @@ const apiWinner = "http://localhost:5010/winners";
 
     document.dispatchEvent(new CustomEvent("winner"));
 };
-// /* ------------------------------- */
-import { displayCats } from "./mariana.js";
-import { displayDogs } from "./mariana.js";
 
-/* ---------Winner-EventListener-------------- */
-document.addEventListener("click", (e) => {
-/*     fetchCats();
-    fetchDogs(); */
-/*     displayCats();
-    displayDogs();
-    let URL = "";
-    let ID = "";
-    let TYPE = "";
-    let VOTE = ""; */ 
-    if (e.target.id === "m1") {
-        fetchCats();
-        fetchDogs();
-        displayCats();
-        displayDogs();
-        let URL = "";
-        let ID = "";
-        let TYPE = "";
-        let VOTE = "";
-        URL = `${cats[0].url}`;
-        ID = `${cats[0].id}`;
-        const NewWinner = {
-            url: URL,
-            type: TYPE,
-            votes: VOTE,
-            id: ID,
-        };
-        addWinner(NewWinner);
-    } else if (e.target.id === "m2") {
-        fetchCats();
-        fetchDogs();
-        displayCats();
-        displayDogs();
-        let URL = "";
-        let ID = "";
-        let TYPE = "";
-        let VOTE = "";
-        URL = `${dogs[0].url}`;
-        ID = `${dogs[0].id}`;
-        const NewWinner = {
-            url: URL,
-            type: TYPE,
-            votes: VOTE,
-            id: ID,
-        };
-        addWinner(NewWinner);
-    }
-});
-
-const displayNewWinner = () => {
-    const NewWinner = addWinner();
-    renderWinner(NewWinner);
-};
-//displayNewWinner();
-/* 
-let renderWinner = (NewWinner) => {
-    let html = ``;
-    html = `
-    <img style="height:200px; width:200px" src= ${NewWinner.url} alt="">`;
-    document.getElementById("m_displayWinner").innerHTML = html;
-};
-renderWinner();
-
-/* test */
-
-/* document.addEventListener("NewWinner", (e) => {
-    renderWinner();
-}); */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
+/* --------------------------------------------- */
 
