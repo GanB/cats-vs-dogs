@@ -1,17 +1,155 @@
 {
-    "scoreCard": [
-        {
-            "countDog": 5,
-            "countCat": 6,
-            "id": 1
-        }
-    ],
-    "winners": [
-        {
-            "url": "https://cdn2.thecatapi.com/images/55p.jpg",
-            "type": "cat",
-            "votes": 2,
-            "id": 1
-        }
-    ]
+  "apiCat": [
+    {}
+  ],
+  "apiDog": [
+    {}
+  ],
+  "scoreCard": [
+    {
+      "countDog": 5,
+      "countCat": 6,
+      "id": 1
+    }
+  ],
+  "winners": [
+    {
+      "url": "https://cdn2.thecatapi.com/images/OaTQfIktG.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "OaTQfIktG"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/B1KdxlcNX_1280.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "B1KdxlcNX"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/MjA1NjI2Mg.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "MjA1NjI2Mg"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/B1d5me547_1280.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "B1d5me547"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/HyaztunHm_1280.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "HyaztunHm"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/h23HQAljB_1280.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "h23HQAljB"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/pNg2yT6Wc.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "pNg2yT6Wc"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/DqOCh-Dyj.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "DqOCh-Dyj"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/9bs.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "9bs"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/uPip37kFt.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "uPip37kFt"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/jInbLhUdh.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "jInbLhUdh"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/Asut5CUgQ.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "Asut5CUgQ"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/3PxLoudtK.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "3PxLoudtK"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/LmGFTdAev.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "LmGFTdAev"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/QDqJrzj0S.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "QDqJrzj0S"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/bb5.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "bb5"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/r1I4hl5Em_1280.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "r1I4hl5Em"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/wQz67QCme.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "wQz67QCme"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/aua.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "aua"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/hweK6aOl9.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "hweK6aOl9"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/d_dNvBD0R.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "d_dNvBD0R"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/x0N6Jg0nw.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "x0N6Jg0nw"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/Bkam2l9Vm_1280.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "Bkam2l9Vm"
+    }
+  ]
 }
