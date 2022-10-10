@@ -29,7 +29,7 @@ body {
     border-radius: 50px 0px 0px 0px;
     margin-top: 50px;
     position: relative;
-   /*  margin-bottom: 50px; */
+    /*  margin-bottom: 50px; */
     /* z-index: 2; */
 }
 
@@ -105,21 +105,23 @@ body {
 
 .sideBorder {
     border: 2px solid #c7c0be;
-    width: 300px;
+    width: 650px;
     height: 100%;
     margin-left: 20px;
     display: flex;
+    /* flex-wrap: wrap-reverse; */
     justify-content: space-around;
     flex-direction: row;
     border: 1px solid #ffc72d;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     padding: 20px;
     background-color: #e3e3e3;
     box-shadow: #ad4723 2px 2px 5px;
     border-radius: 5px;
     margin-top: 50px;
     margin-bottom: 150px;
-    z-index: 2;
+    /* z-index:2; */
+
 }
 .img {
     border: #04021d 1px solid;
@@ -130,6 +132,8 @@ body {
 .image {
     height: 200px;
     width: 200px;
+    /* image-resolution: 1dpi snap; */
+/*     z-index:3;  */
 }
 
 

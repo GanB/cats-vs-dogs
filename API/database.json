@@ -1,17 +1,35 @@
 {
-    "scoreCard": [
-        {
-            "countDog": 5,
-            "countCat": 6,
-            "id": 1
-        }
-    ],
-    "winners": [
-        {
-            "url": "https://cdn2.thecatapi.com/images/55p.jpg",
-            "type": "cat",
-            "votes": 2,
-            "id": 1
-        }
-    ]
+  "apiCat": [
+    {}
+  ],
+  "apiDog": [
+    {}
+  ],
+  "scoreCard": [
+    {
+      "countDog": 5,
+      "countCat": 6,
+      "id": 1
+    }
+  ],
+  "winners": [
+    {
+      "url": "https://cdn2.thecatapi.com/images/OaTQfIktG.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "OaTQfIktG"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/B1KdxlcNX_1280.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "B1KdxlcNX"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/TZwbGR2T6.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "TZwbGR2T6"
+    }
+  ]
 }
