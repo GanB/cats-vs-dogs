@@ -22,28 +22,41 @@ const mapDogs = () => {
    return applicationState.apiDog.map(dog =>({...dog}))
 }
 
-const renderHTML = async () => {
+const rednerAll = async () => {
    const cat = await fetchCatThomas()
    const dog = await fetchDogThomas()
-   for (const cats of cat) {
-      document.getElementById("timg1").innerHTML = `<img src="${cats.url}" alt="Image of a very cool cat" class="img">`;
-      applicationState.apiCat = cats.url
-   }
-   for (const dogs of dog) {
-      document.getElementById("timg2").innerHTML = `<img src="${dogs.url}" alt="Image of a very cool dog" class="img">`;
-      applicationState.apiDog = dogs.url
-   }
+
+   //Posts the cat image to the DOM and assigns it to the application state
+   document.getElementById("timg1").innerHTML = `<img src="${cat[0].url}" alt="Image of a very cool cat" class="img">`;
+   applicationState.apiCat = cat[0].url;
+
+   //Posts the dog image to the DOM and assigns it to the application state
+   document.getElementById("timg2").innerHTML = `<img src="${dog[0].url}" alt="Image of a very cool dog" class="img">`;
+   applicationState.apiDog = dog[0].url;
+
 }
 
-renderHTML()
+rednerAll()
+
+const renderCats = async () => {
+   const cat = await fetchCatThomas();
+   document.getElementById("timg1").innerHTML = `<img src="${cat[0].url}" alt="Image of a very cool cat" class="img">`;
+   applicationState.apiCat = cat[0].url;
+}
+
+const renderDogs = async () => {
+   const dog = await fetchDogThomas();
+   document.getElementById("timg2").innerHTML = `<img src="${dog[0].url}" alt="Image of a very cool dog" class="img">`;
+   applicationState.apiDog = dog[0].url;
+}
 
 document.addEventListener("click", e => {
    if (e.target.id === "voteCatT") {
       document.getElementById("m_displayWinner").innerHTML += `<img src="${applicationState.apiCat}" class="img">`;
-      renderHTML()
+      renderCats()
    }
    if (e.target.id === "voteDogT") {
       document.getElementById("m_displayWinner").innerHTML += `<img src="${applicationState.apiDog}" class="img">`;
-      renderHTML()
+      renderDogs()
    }
 })
