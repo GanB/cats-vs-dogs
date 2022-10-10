@@ -1,0 +1,51 @@
+.ganesh__section__image {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+  cursor: pointer;
+  /* z-index: 0; */
+}
+
+.ganesh__section__image__parent {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border: 1px solid #ffc72d;
+  align-items: flex-end;
+  max-height: 600px;
+  padding: 20px;
+  /* background-color: #e3e3e3; */
+  background-color: #14aac2;
+  box-shadow: #ad4723 2px 2px 5px;
+  border-radius: 50px 50px 0px 0px;
+  margin-top: 50px;
+  position: relative;
+  /*  margin-bottom: 50px; */
+  /* z-index: -2; */
+}
+
+.ganesh__section__header {
+  /* background-color:#B35E3D ;*/
+  /*  background-color: #ad4723; vvv*/
+  border-radius: 50px 50px 0px 0px;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 60px;
+  /* position: absolute; */
+  border: 1px solid #ad4723;
+  box-shadow: #ad4723 2px 0px 5px;
+  /* z-index: -1; */
+}
+
+.ganesh__section__image_container {
+  border: none;
+  height: 200px;
+  width: 200px;
+  margin-top: 60px;
+  /* z-index: 0; */
+}
+
+/* [class^="ganesh__section__image"] {
+  cursor: pointer;
+} */
