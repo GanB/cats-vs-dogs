@@ -1,5 +1,7 @@
 import { apiCat, apiDog, applicationState } from "./dataAccess.js"
 
+
+
 const fetchCatThomas = async () => {
    const data = await fetch(apiCat)
    const response = await data.json()
@@ -7,9 +9,9 @@ const fetchCatThomas = async () => {
    return applicationState.apiCat
 }
 
-const mapCats = () => {
-   return applicationState.apiCat.map(cat =>({...cat}))
-}
+// const mapCats = () => {
+//    return applicationState.apiCat.map(cat =>({...cat}))
+// }
 
 const fetchDogThomas = async () => {
    const data = await fetch(apiDog)
@@ -18,9 +20,9 @@ const fetchDogThomas = async () => {
    return applicationState.apiDog
 }
 
-const mapDogs = () => {
-   return applicationState.apiDog.map(dog =>({...dog}))
-}
+// const mapDogs = () => {
+//    return applicationState.apiDog.map(dog =>({...dog}))
+// }
 
 const rednerAll = async () => {
    const cat = await fetchCatThomas()
