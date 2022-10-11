@@ -78,8 +78,6 @@ document.addEventListener("click", (event) => {
     } 
 })
 
-
-
 const apiWinner = "http://localhost:5010/winners";
 
 const addWinner = async (newWinner) => {
@@ -92,8 +90,7 @@ const addWinner = async (newWinner) => {
     };
     const response = await fetch(`${apiWinner}`, fetchOptions);
     const responseJS = await response.json(response);
-
     document.dispatchEvent(new CustomEvent("winner"));
+    return responseJS
 };
 
-const countDogWinners = 
