@@ -63,6 +63,7 @@ ganeshSection.addEventListener("click", async (imageClicked) => {
     const url = clickedId.pop();
     const type = clickedId.pop();
 
+    console.log({ url: url, type: type, vote: 1 });
     await recordVote({ url: url, type: type, vote: 1 });
   }
 });
