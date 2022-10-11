@@ -7,32 +7,45 @@ const fetchCat = async () => {
     return applicationState.apiCat
 }
 
+// const getCats = () => {
+//     return applicationState.apiCat.map((cat) => ({...cat}))
+// }
+
 const fetchDog = async () => {
     const dataFetch = await fetch(apiDog)
     const randomDog = await dataFetch.json()
-    return applicationState.apiDog = randomDog
+    applicationState.apiDog = randomDog
+    return applicationState.apiDog
 }
 
-const displayRandomCat = async () => {
-    const randomCat = await fetchCat()
-    renderCatToDOM(randomCat)
-}
+// const getDogs = () => {
+//     return applicationState.apiDog.map((dog) => ({...dog}))
+// }
 
-const renderCatToDOM = (cat) => {
+const renderCatToDOM = async () => {
+    const cat = await fetchCat()
     let html = `<img class="image" src="${cat[0].url}">`
+    applicationState.apiCat = cat[0].url
     return document.getElementById("d1").innerHTML = html
 }
 
-displayRandomCat()
+renderCatToDOM()
 
-const displayRandomDog = async () => {
-    const randomDog = await fetchDog()
-    renderDogToDOM(randomDog)
-}
-
-const renderDogToDOM = (dog) => {
+const renderDogToDOM = async () => {
+    const dog = await fetchDog()
     let html = `<img class="image" src="${dog[0].url}">`
+    applicationState.apiDog = dog[0].url
     return document.getElementById("d2").innerHTML = html
 }
 
-displayRandomDog()
+renderDogToDOM()
+
+document.addEventListener("click", (event) => {
+    if (event.target.id === 'voteCat') {
+        document.getElementById('sidebar').innerHTML += `<img class="image" src="${applicationState.apiCat}">`
+        renderCatToDOM()
+    } else if (event.target.id === 'voteDog') {
+        document.getElementById('sidebar').innerHTML += `<img class="image" src="${applicationState.apiDog}">`
+        renderDogToDOM()
+    } 
+})
