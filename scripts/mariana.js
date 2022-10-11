@@ -5,7 +5,7 @@ import { fetchWDogs } from "./mariana_main.js";
 import { addWinner } from "./mariana_main.js";
 
 /* ------------------------------------------ */
-mainContainer.addEventListener("click", clickEvent => {
+// mainContainer.addEventListener("click", clickEvent => {
 //     const ethanImgContainer = document.querySelector("#ethan-winner")
 //     const winnerObj = {}
 //     if(clickEvent.target.id.startsWith("cat-img")) {
@@ -35,56 +35,55 @@ mainContainer.addEventListener("click", clickEvent => {
 // };
 
 const displayCats = async () => {
-    const cats = await fetchCats();
-    renderCats(cats);
+  const cats = await fetchCats();
+  renderCats(cats);
 };
-    displayCats();
-    
-const renderCats = (cats) => {
-    let html = ``;
-    html = `<img id="M1" class="image" src= ${cats[0].url} alt="">`;
-    document.getElementById("m1").innerHTML = html;
+displayCats();
 
-    document.addEventListener("click", (e) => {
-    
-        if (e.target.id === "M1") {
-            e.preventDefault();
-            let NewWinner = {};
-            let URL = `${cats[0].url}`;
-            let TYPE = "cat";
-            let VOTE = 0;
-            let ID = `${cats[0].id}`;
-            NewWinner = {
-                url: URL,
-                type: TYPE,
-                votes: VOTE,
-                id: ID,
-            };
-            addWinner(NewWinner);
-        }
-    });
-    };
-    
+const renderCats = (cats) => {
+  let html = ``;
+  html = `<img id="M1" class="image" src= ${cats[0].url} alt="">`;
+  document.getElementById("m1").innerHTML = html;
+
+  document.addEventListener("click", (e) => {
+    if (e.target.id === "M1") {
+      e.preventDefault();
+      let NewWinner = {};
+      let URL = `${cats[0].url}`;
+      let TYPE = "cat";
+      let VOTE = 0;
+      let ID = `${cats[0].id}`;
+      NewWinner = {
+        url: URL,
+        type: TYPE,
+        votes: VOTE,
+        id: ID,
+      };
+      addWinner(NewWinner);
+    }
+  });
+};
+
 /*-----Winner--cats------*/
 const displayWCats = async (winner) => {
-    const cats = await fetchWCats();
-    renderWCats(cats);
+  const cats = await fetchWCats();
+  renderWCats(cats);
 };
 
 const renderWCats = (cats) => {
-    let html = ``;
-    let catsVote = 0;
-    for (const cat of cats) {
-        console.log(cats);
-        html += `<img id="M1" class="image" src= ${cat.url} alt="">`;
-        if (cat.type === "cat") {
-            catsVote++;
-        }
-        let htmlM = ``;
-        htmlM += `<div style="color:#7A0144;font-size:70px">${catsVote}</div>`;
-        document.getElementById("Mcat").innerHTML = htmlM;
+  let html = ``;
+  let catsVote = 0;
+  for (const cat of cats) {
+    console.log(cats);
+    html += `<img id="M1" class="image" src= ${cat.url} alt="">`;
+    if (cat.type === "cat") {
+      catsVote++;
     }
-    document.getElementById("m_displayWinner").innerHTML = html;
+    let htmlM = ``;
+    htmlM += `<div style="color:#7A0144;font-size:70px">${catsVote}</div>`;
+    document.getElementById("Mcat").innerHTML = htmlM;
+  }
+  document.getElementById("sidebar").innerHTML = html;
 };
 displayWCats();
 /* -----------------Dogs--------------------- */
@@ -99,55 +98,55 @@ displayWCats();
 
 /* display */
 const displayDogs = async () => {
-    const dogs = await fetchDogs();
-    renderDogs(dogs);
+  const dogs = await fetchDogs();
+  renderDogs(dogs);
 };
 displayDogs();
 
 /* render */
 const renderDogs = (dogs) => {
-    let html = ``;
-    html = `
+  let html = ``;
+  html = `
     <img id="M2" class="image" src= ${dogs[0].url} alt="">`;
-    document.getElementById("m2").innerHTML = html;
+  document.getElementById("m2").innerHTML = html;
 
-    document.addEventListener("click", (e) => {
-        let NewWinner = {};
-        if (e.target.id === "M2") {
-            e.preventDefault();
-            let URL = `${dogs[0].url}`;
-            let TYPE = "dog";
-            let VOTE = 0;
-            let ID = `${dogs[0].id}`;
-            NewWinner = {
-                url: URL,
-                type: TYPE,
-                votes: VOTE,
-                id: ID,
-            };
-            addWinner(NewWinner);
-        }
-    });
+  document.addEventListener("click", (e) => {
+    let NewWinner = {};
+    if (e.target.id === "M2") {
+      e.preventDefault();
+      let URL = `${dogs[0].url}`;
+      let TYPE = "dog";
+      let VOTE = 0;
+      let ID = `${dogs[0].id}`;
+      NewWinner = {
+        url: URL,
+        type: TYPE,
+        votes: VOTE,
+        id: ID,
+      };
+      addWinner(NewWinner);
+    }
+  });
 };
 
 /*-----Winner--dogs------*/
 const displayWDogs = async (winner) => {
-    const dogs = await fetchWDogs();
-    renderWDogs(dogs);
+  const dogs = await fetchWDogs();
+  renderWDogs(dogs);
 };
 
 const renderWDogs = (dogs) => {
-    let html2 = ``;
-    let dogsVote = 0;
-    for (const dog of dogs) {
-        html2 += `<img id="M2" class="image" src= ${dog.url} alt="">`;
-        if (dog.type === "dog") {
-            dogsVote++;
-        }
-        let htmlM = ``;
-        htmlM += `<div style="color:#168E22;font-size:70px">${dogsVote}</div>`;
-        document.getElementById("Mdog").innerHTML = htmlM;
+  let html2 = ``;
+  let dogsVote = 0;
+  for (const dog of dogs) {
+    html2 += `<img id="M2" class="image" src= ${dog.url} alt="">`;
+    if (dog.type === "dog") {
+      dogsVote++;
     }
-    document.getElementById("m_displayWinner").innerHTML = html2;
+    let htmlM = ``;
+    htmlM += `<div style="color:#168E22;font-size:70px">${dogsVote}</div>`;
+    document.getElementById("Mdog").innerHTML = htmlM;
+  }
+  document.getElementById("sidebar").innerHTML = html2;
 };
 displayWDogs();

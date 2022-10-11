@@ -1,9 +1,9 @@
-import { getCatApiState, getDogApiState, getCatImageUrl, getDogImageUrl, fetchCat, fetchDog, postWinningPet } from "./ethanDataAccess.js"
+import { getCatApiState, getDogApiState, getCatImageUrl, getDogImageUrl, fetchCat, fetchDog, postWinningPet, getScore, fetchScore } from "./ethanDataAccess.js"
 
 const mainContainer = document.querySelector("#ethan")  
 
-mainContainer.addEventListener("click", clickEvent => {
-   const ethanImgContainer = document.querySelector("#ethan-winner")
+mainContainer.addEventListener("click", async (clickEvent) => {
+   const ethanImgContainer = document.querySelector("#sidebar")
    const winnerObj = {}
    if(clickEvent.target.id.startsWith("cat-img")) {
       const [,catId] = clickEvent.target.id.split("--")
@@ -12,7 +12,8 @@ mainContainer.addEventListener("click", clickEvent => {
       winnerObj.vote = 1
       winnerObj.url = getCatImageUrl(catId)
       ethanImgContainer.innerHTML = `<img class="cat-img" src="${getCatImageUrl(catId)}"/>`
-      postWinningPet(winnerObj)
+      await postWinningPet(winnerObj)
+      await getScore(winnerObj.type)
    } else if (clickEvent.target.id.startsWith("dog-img")) {
       const [,dogId] = clickEvent.target.id.split("--")
       winnerObj.dogid = dogId
@@ -20,7 +21,8 @@ mainContainer.addEventListener("click", clickEvent => {
       winnerObj.vote = 1
       winnerObj.url = getDogImageUrl(dogId)
       ethanImgContainer.innerHTML = `<img class="cat-img" src="${getDogImageUrl(dogId)}"/>`
-      postWinningPet(winnerObj)
+      await postWinningPet(winnerObj)
+      await getScore(winnerObj.type)
    }
 })
 
@@ -48,6 +50,7 @@ const renderDogImg = () => {
 
 const renderAll = async () => {
    await fetchCat()
+   await fetchScore()
    await fetchDog()
    document.querySelector('#ethan-cat').innerHTML = renderCatImg()
    document.querySelector("#ethan-dog").innerHTML = renderDogImg()
