@@ -44,10 +44,10 @@ const renderCats = (cats) => {
   let html = ``;
   html = `<img id="M1" class="image" src= ${cats[0].url} alt="">`;
   document.getElementById("m1").innerHTML = html;
-
+  console.log(cats);
   document.addEventListener("click", (e) => {
     if (e.target.id === "M1") {
-      e.preventDefault();
+      //e.preventDefault();
       let NewWinner = {};
       let URL = `${cats[0].url}`;
       let TYPE = "cat";
@@ -69,6 +69,7 @@ const displayWCats = async (winner) => {
   const cats = await fetchWCats();
   renderWCats(cats);
 };
+displayWCats();
 
 const renderWCats = (cats) => {
   let html = ``;
@@ -80,12 +81,12 @@ const renderWCats = (cats) => {
       catsVote++;
     }
     let htmlM = ``;
-    htmlM += `<div style="color:#7A0144;font-size:70px">${catsVote}</div>`;
+    htmlM += `<div style="color:#7A0144;font-size:50px">${catsVote}</div>`;
     document.getElementById("Mcat").innerHTML = htmlM;
   }
-  document.getElementById("sidebar").innerHTML = html;
+  document.getElementById("sidebar_Mariana").innerHTML = html;
 };
-displayWCats();
+
 /* -----------------Dogs--------------------- */
 /* --fetch--display--render-- */
 
@@ -109,11 +110,11 @@ const renderDogs = (dogs) => {
   html = `
     <img id="M2" class="image" src= ${dogs[0].url} alt="">`;
   document.getElementById("m2").innerHTML = html;
-
+  console.log(dogs);
   document.addEventListener("click", (e) => {
     let NewWinner = {};
     if (e.target.id === "M2") {
-      e.preventDefault();
+      //e.preventDefault();
       let URL = `${dogs[0].url}`;
       let TYPE = "dog";
       let VOTE = 0;
@@ -134,6 +135,7 @@ const displayWDogs = async (winner) => {
   const dogs = await fetchWDogs();
   renderWDogs(dogs);
 };
+displayWDogs();
 
 const renderWDogs = (dogs) => {
   let html2 = ``;
@@ -144,9 +146,9 @@ const renderWDogs = (dogs) => {
       dogsVote++;
     }
     let htmlM = ``;
-    htmlM += `<div style="color:#168E22;font-size:70px">${dogsVote}</div>`;
+    htmlM += `<div style="color:#168E22;font-size:50px">${dogsVote}</div>`;
     document.getElementById("Mdog").innerHTML = htmlM;
   }
-  document.getElementById("sidebar").innerHTML = html2;
+  document.getElementById("sidebar_Mariana").innerHTML = html2;
 };
-displayWDogs();
+
