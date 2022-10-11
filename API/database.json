@@ -2,7 +2,7 @@
   "scoreCard": [
     {
       "countCat": 19,
-      "countDog": 13,
+      "countDog": 14,
       "id": 1
     }
   ],
@@ -12,7 +12,25 @@
       "type": "cat",
       "votes": 2,
       "id": 1
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/rJifQpT4m.gif",
+      "type": "dog",
+      "votes": 0,
+      "id": "rJifQpT4m"
+    },
+    {
+      "dogid": "VdUHW9aaz",
+      "type": "dog",
+      "vote": 1,
+      "url": "https://cdn2.thedogapi.com/images/VdUHW9aaz.jpg",
+      "id": 2
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/BJWc57iNQ.gif",
+      "type": "dog",
+      "votes": 0,
+      "id": "BJWc57iNQ"
     }
-
   ]
 }
