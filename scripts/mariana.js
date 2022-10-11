@@ -4,6 +4,29 @@ import { fetchDogs } from "./mariana_main.js";
 import { fetchWDogs } from "./mariana_main.js";
 import { addWinner } from "./mariana_main.js";
 
+/* ------------------------------------------ */
+// mainContainer.addEventListener("click", clickEvent => {
+//     const ethanImgContainer = document.querySelector("#ethan-winner")
+//     const winnerObj = {}
+//     if(clickEvent.target.id.startsWith("cat-img")) {
+//        const [,catId] = clickEvent.target.id.split("--")
+//        winnerObj.catid = catId
+//        winnerObj.type = "cat"
+//        winnerObj.vote = 1
+//        winnerObj.url = getCatImageUrl(catId)
+//        ethanImgContainer.innerHTML = `<img class="cat-img" src="${getCatImageUrl(catId)}"/>`
+//        postWinningPet(winnerObj)
+//     } else if (clickEvent.target.id.startsWith("dog-img")) {
+//        const [,dogId] = clickEvent.target.id.split("--")
+//        winnerObj.dogid = dogId
+//        winnerObj.type = "dog"
+//        winnerObj.vote = 1
+//        winnerObj.url = getDogImageUrl(dogId)
+//        ethanImgContainer.innerHTML = `<img class="cat-img" src="${getDogImageUrl(dogId)}"/>`
+//        postWinningPet(winnerObj)
+//     }
+//  })
+
 /* -----------------Cats--------------------- */
 //     const fetchCats = async () => {
 //     const dataFetch = await fetch(`${apiCatM}`);
@@ -16,6 +39,7 @@ const displayCats = async () => {
   renderCats(cats);
 };
 displayCats();
+
 const renderCats = (cats) => {
   let html = ``;
   html = `<img id="M1" class="image" src= ${cats[0].url} alt="">`;
@@ -23,6 +47,7 @@ const renderCats = (cats) => {
 
   document.addEventListener("click", (e) => {
     if (e.target.id === "M1") {
+      e.preventDefault();
       let NewWinner = {};
       let URL = `${cats[0].url}`;
       let TYPE = "cat";
@@ -38,6 +63,7 @@ const renderCats = (cats) => {
     }
   });
 };
+
 /*-----Winner--cats------*/
 const displayWCats = async (winner) => {
   const cats = await fetchWCats();
@@ -75,6 +101,7 @@ const displayDogs = async () => {
   const dogs = await fetchDogs();
   renderDogs(dogs);
 };
+displayDogs();
 
 /* render */
 const renderDogs = (dogs) => {
@@ -86,6 +113,7 @@ const renderDogs = (dogs) => {
   document.addEventListener("click", (e) => {
     let NewWinner = {};
     if (e.target.id === "M2") {
+      e.preventDefault();
       let URL = `${dogs[0].url}`;
       let TYPE = "dog";
       let VOTE = 0;
@@ -100,7 +128,7 @@ const renderDogs = (dogs) => {
     }
   });
 };
-displayDogs();
+
 /*-----Winner--dogs------*/
 const displayWDogs = async (winner) => {
   const dogs = await fetchWDogs();
