@@ -9,3 +9,4 @@ export const applicationState = {
    apiDog: []
 }
 
+const API = "http://localhost:5010"
