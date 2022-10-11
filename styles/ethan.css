@@ -1,0 +1,24 @@
+.cat-img {
+    width: 200px;
+    height: 200px;
+}
+
+.dog-img{
+    width: 200px;
+    height: 200px;
+}
+
+#ethan-winner {
+    display: flex;
+    align-self: flex-start;
+    width: 200px;
+    height: 200px;
+}
+
+.ethan-img {
+    display: none;
+    border: #04021d 1px solid;
+    height: 200px;
+    width: 200px;
+    margin-top: 60px;
+}
