@@ -1,10 +1,10 @@
 /* @import "./mariana.css"; */
 @import url("ethan.css");
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  flex-wrap: wrap;
 }
 body {
     background-color: #302d3f;
@@ -12,9 +12,9 @@ body {
     justify-content: center;
 }
 .tables_style {
-    display: flex;
-    display: inline-block;
-    width: 50%;
+  display: flex;
+  display: inline-block;
+  width: 50%;
 }
 .style {
     display: flex;
@@ -70,13 +70,13 @@ body {
 }
 
 .teamName {
-    color: #f7f7f7;
-    font-family: "Oswald", Arial, Helvetica, sans-serif;
-    font-size: 30px;
-    letter-spacing: 0.2em;
-    line-height: 53px;
-    margin-left: 10%;
-    font-weight: 100;
+  color: #f7f7f7;
+  font-family: "Oswald", Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  letter-spacing: 0.2em;
+  line-height: 53px;
+  margin-left: 10%;
+  font-weight: 100;
 }
 
 .footer {
@@ -93,16 +93,16 @@ body {
     z-index: 2;
 }
 .copyright {
-    height: 50px;
-    padding: 10px;
-    bottom: 0px;
+  height: 50px;
+  padding: 10px;
+  bottom: 0px;
 }
 .iconify {
-    font-size: 50px;
-    padding: 10p;
+  font-size: 50px;
+  padding: 10p;
 }
 
-.sideBorder {
+.sidebar {
     border: 2px solid #c7c0be;
     width: 650px;
     height: 100%;
@@ -120,13 +120,29 @@ body {
     margin-top: 50px;
     margin-bottom: 150px;
     /* z-index:2; */
-
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  border: 1px solid #ffc72d;
+  align-items: flex-end;
+  /*  min-height: 500px; */
+  padding: 20px;
+  background-color: #e3e3e3;
+  box-shadow: #ad4723 2px 2px 5px;
+  border-radius: 5px;
+  margin-top: 50px;
+  margin-bottom: 150px;
+  /*     position: relative; */
+  z-index: -2;
 }
+
+
 .img {
     border: #04021d 1px solid;
     height: 200px;
     width: 200px;
     margin-top: 60px;
+
 }
 .image {
     height: 200px;
