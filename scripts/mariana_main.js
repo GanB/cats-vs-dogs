@@ -44,7 +44,6 @@ export const fetchWDogs = async () => {
     return responseDogs;
 };
 /* ----------------------------------------------- */
-
 /* --------Winner----- */
 const apiWinner = "http://localhost:5010/winners";
 
@@ -57,12 +56,12 @@ export const addWinner = async (newWinner) => {
         body: JSON.stringify(newWinner),
     };
     const response = await fetch(`${apiWinner}`, fetchOptions);
-    const responseJS = await response.json(response);
+    const responseJS = await response.json();
 
     document.dispatchEvent(new CustomEvent("winner"));
-};
 
-/* --------------------------------------------- */
-/* --------------------------------------------- */
-/* --------------------------------------------- */
-/* --------------------------------------------- */
+//     const responseJson = await response.json()
+//     mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+    return responseJS 
+
+};
