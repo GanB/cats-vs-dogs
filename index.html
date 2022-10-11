@@ -10,6 +10,7 @@
             href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Oswald:wght@200;400&family=Palanquin:wght@200;300;500&display=swap"
             rel="stylesheet"
         />
+        <link rel="stylesheet" href="./styles/ganesh-section.css" />
         <style>
             @import url('https://fonts.googleapis.com/css2?family=Square+Peg&display=swap');
             </style>
@@ -59,18 +60,21 @@
                             <!-- Mariana_Test-->
                             <!-- <section id="Dom"></section> -->
 
-                <!-- Ganesh -->
-            <section>
-                <div class="border">
-                    <h3 class="teamName">
-                        Ganesh's Section
-                    </h3>
-                </div>
-                <div id="ganesh" class="style G">
-                        <div id="" class="img"></div>
-                        <div id="" class="img"></div>
-                </div>
-            </section>
+      <!-- Mariana -->
+      <section>
+        <div class="border">
+          <h3 class="teamName">Mariana's Section</h3>
+        </div>
+        <div id="mariana" class="style M">
+          <div id="m1" class="img"></div>
+          <div id="m2" class="img"></div>
+        </div>
+      </section>
+
+
+      <!-- Ganesh -->
+      <section id="ganesh__section"></section>
+
 
                 <!-- Deanna -->
             <section>
@@ -79,7 +83,9 @@
                 </div>
                 <div id="deanna" class="style D">
                         <div id="d1" class="img"></div>
+                        <button type="button" class="vote-cat" id="voteCat">Vote Cat!</button>
                         <div id="d2" class="img"></div>
+                        <button type="button" class="vote-dog" id="voteDog">Vote Dog!</button>
                 </div>
             </section>
 
@@ -91,86 +97,78 @@
                     </h3>
                 </div>
                 <div id="thomas" class="style T">
-                        <div id="" class="img"></div>
-                        <div id="" class="img"></div>
+                        <div id="timg1"></div>
+                            <button type="button" class="tButton" id="voteCatT">Vote Cat</button>
+                        <div id="timg2"></div>
+                            <button type="button" class="tButton" id="voteDogT">Vote Dog</button>
                 </div>
             </section>
         </section>
 
-
-                <!-- Sidebar -->
-                <section>
-                <div id="thomas" class="sideBorder">
-                    <div id="ethan-winner" class="ethan-img"></div>
-                    <div id="m_displayWinner"></div>
-                    <div id="m_displayWinner_test"></div>
-                </div>
-                    </section>
-                </section>
+    <!-- Sidebar -->
+    <section>
+      <!-- <div class="border"></div> -->
+      <div id="sidebar" class="sidebar"></div>
+    </section>
 
 
-        <footer class="footer">
-            <a href="https://github.com/ethansawicki" target="_blank"
-                ><span
-                    class="iconify fa-3x icon"
-                    data-icon="fa6-brands:github-square"
-                    style="color: #d6ccc3; margin: 10px"
-                ></span
-            ></a>
-            <a href="https://github.com/Mary-Mena21" target="_blank"
-                ><span
-                    class="iconify fa-3x icon"
-                    data-icon="fa6-brands:github-square"
-                    style="color: #d6ccc3; margin: 10px"
-                ></span
-            ></a>
-            <a href="https://github.com/GanB" target="_blank"
-                ><span
-                    class="iconify fa-3x icon"
-                    data-icon="fa6-brands:github-square"
-                    style="color: #d6ccc3; margin: 10px"
-                ></span
-            ></a>
-            <a href="https://github.com/dhollifield" target="_blank"
-                ><span
-                    class="iconify fa-3x icon"
-                    data-icon="fa6-brands:github-square"
-                    style="color: #d6ccc3; margin: 10px"
-                ></span
-            ></a>
-            <a href="https://github.com/htkibby" target="_blank"
-                ><span
-                    class="iconify fa-3x icon"
-                    data-icon="fa6-brands:github-square"
-                    style="color: #d6ccc3; margin: 10px"
-                ></span
-            ></a>
-            <a href="#Top">
-                <span
-                    class="iconify"
-                    data-icon="bi:arrow-up-square"
-                    style="color: #d6ccc3; margin: 10px"
-                >
-                </span
-            ></a>
-        </footer>
-        <p class="copyright" style="color: rgb(0, 0, 0)" ;>
-            &copy; 2022 *Scrum_Lords* NSS.com
-        </p>
-
-        <!-- <script type="module" src="./scripts/ethan.js"></script> -->
+    <footer class="footer">
+      <a href="https://github.com/ethansawicki" target="_blank"
+        ><span
+          class="iconify fa-3x icon"
+          data-icon="fa6-brands:github-square"
+          style="color: #d6ccc3; margin: 10px"
+        ></span
+      ></a>
+      <a href="https://github.com/Mary-Mena21" target="_blank"
+        ><span
+          class="iconify fa-3x icon"
+          data-icon="fa6-brands:github-square"
+          style="color: #d6ccc3; margin: 10px"
+        ></span
+      ></a>
+      <a href="https://github.com/GanB" target="_blank"
+        ><span
+          class="iconify fa-3x icon"
+          data-icon="fa6-brands:github-square"
+          style="color: #d6ccc3; margin: 10px"
+        ></span
+      ></a>
+      <a href="https://github.com/dhollifield" target="_blank"
+        ><span
+          class="iconify fa-3x icon"
+          data-icon="fa6-brands:github-square"
+          style="color: #d6ccc3; margin: 10px"
+        ></span
+      ></a>
+      <a href="https://github.com/htkibby" target="_blank"
+        ><span
+          class="iconify fa-3x icon"
+          data-icon="fa6-brands:github-square"
+          style="color: #d6ccc3; margin: 10px"
+        ></span
+      ></a>
+      <a href="#Top">
+        <span
+          class="iconify"
+          data-icon="bi:arrow-up-square"
+          style="color: #d6ccc3; margin: 10px"
+        >
+        </span
+      ></a>
+    </footer>
+    <p class="copyright" style="color: rgb(0, 0, 0)" ;>
+      &copy; 2022 *Scrum_Lords* NSS.com
+    </p>
         <script type="module" src="./scripts/ethanjs/ethanSection.js"></script>
         <script type="module" src="./scripts/mariana.js"></script>
-        <!--  <script type="module" src="./scripts/ganesh.js"></script>
+        <script type="module" src="./scripts/ganesh/ganeshSection.js"></script>
         <script type="module" src="./scripts/deanna.js"></script>
-        <script type="module" src="./scripts/Thomas.js"></script>  -->
-        <!-- Mariana_test -->
-<<<<<<< HEAD
-        <!-- <script type="module" src="./Mariana_test/mariana_dom.js"></script> -->
-=======
+        <script type="module" src="./scripts/thomasJs.js"></script> -->
+                <!-- Mariana_test -->
+        <script type="module" src="./Mariana_test/mariana_dom.js"></script>
         <script src="./Mariana_test/mariana_dom.js"></script>
-
->>>>>>> 80d182036f9545681923f1def27149cc33200895
-    </body>
+  </body>
 </html>
+
 
