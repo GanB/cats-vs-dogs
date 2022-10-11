@@ -1,18 +1,12 @@
 {
   "scoreCard": [
     {
-      "countCat": 19,
-      "countDog": 14,
+      "countCat": 25,
+      "countDog": 27,
       "id": 1
     }
   ],
   "winners": [
-    {
-      "url": "https://cdn2.thecatapi.com/images/55p.jpg",
-      "type": "cat",
-      "votes": 2,
-      "id": 1
-    },
     {
       "url": "https://cdn2.thedogapi.com/images/rJifQpT4m.gif",
       "type": "dog",
@@ -20,17 +14,42 @@
       "id": "rJifQpT4m"
     },
     {
-      "dogid": "VdUHW9aaz",
+      "dogid": "Vh2yFrSLm",
       "type": "dog",
       "vote": 1,
-      "url": "https://cdn2.thedogapi.com/images/VdUHW9aaz.jpg",
-      "id": 2
+      "url": "https://cdn2.thedogapi.com/images/Vh2yFrSLm.jpg",
+      "id": "wvLN-fg"
     },
     {
-      "url": "https://cdn2.thedogapi.com/images/BJWc57iNQ.gif",
+      "url": "https://cdn2.thedogapi.com/images/J4H-oD_7x.jpg",
       "type": "dog",
       "votes": 0,
-      "id": "BJWc57iNQ"
-    }
+      "id": "J4H-oD_7x"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/4KMul5EnJ.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "4KMul5EnJ"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/KcUu-6YV0.jpg",
+      "type": "dog",
+      "vote": 1,
+      "id": "6BTRsqi"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/Bymjyec4m_1280.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "Bymjyec4m"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/6l6.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "6l6"
+    },
+   
   ]
 }
