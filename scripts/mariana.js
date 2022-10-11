@@ -36,11 +36,11 @@ import { addWinner } from "./mariana_main.js";
 
 const displayCats = async () => {
   const cats = await fetchCats();
-  renderCats(cats);
-};
-displayCats();
+//   renderCats(cats);
+// };
 
-const renderCats = (cats) => {
+
+// const renderCats = (cats) => {
   let html = ``;
   html = `<img id="M1" class="image" src= ${cats[0].url} alt="">`;
   document.getElementById("m1").innerHTML = html;
@@ -63,15 +63,15 @@ const renderCats = (cats) => {
     }
   });
 };
-
+displayCats();
 /*-----Winner--cats------*/
-const displayWCats = async (winner) => {
+export const displayWCats = async (winner) => {
   const cats = await fetchWCats();
-  renderWCats(cats);
-};
-displayWCats();
+//   renderWCats(cats);
+// };
 
-const renderWCats = (cats) => {
+
+// const renderWCats = (cats) => {
   let html = ``;
   let catsVote = 0;
   for (const cat of cats) {
@@ -86,7 +86,7 @@ const renderWCats = (cats) => {
   }
   document.getElementById("sidebar_Mariana").innerHTML = html;
 };
-
+displayWCats();
 /* -----------------Dogs--------------------- */
 /* --fetch--display--render-- */
 
@@ -100,12 +100,12 @@ const renderWCats = (cats) => {
 /* display */
 const displayDogs = async () => {
   const dogs = await fetchDogs();
-  renderDogs(dogs);
-};
-displayDogs();
+//   renderDogs(dogs);
+// };
 
-/* render */
-const renderDogs = (dogs) => {
+
+// /* render */
+// const renderDogs = (dogs) => {
   let html = ``;
   html = `
     <img id="M2" class="image" src= ${dogs[0].url} alt="">`;
@@ -129,15 +129,15 @@ const renderDogs = (dogs) => {
     }
   });
 };
-
+displayDogs();
 /*-----Winner--dogs------*/
-const displayWDogs = async (winner) => {
+export const displayWDogs = async (winner) => {
   const dogs = await fetchWDogs();
-  renderWDogs(dogs);
-};
-displayWDogs();
+//   renderWDogs(dogs);
+// };
 
-const renderWDogs = (dogs) => {
+
+// const renderWDogs = (dogs) => {
   let html2 = ``;
   let dogsVote = 0;
   for (const dog of dogs) {
@@ -151,4 +151,4 @@ const renderWDogs = (dogs) => {
   }
   document.getElementById("sidebar_Mariana").innerHTML = html2;
 };
-
+displayWDogs();
