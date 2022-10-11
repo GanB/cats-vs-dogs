@@ -13,6 +13,32 @@ import { apiCat } from "./dataAccess.js";
 import { apiDog } from "./dataAccess.js";
 //import {applicationState } from "./dataAccess"
 
+
+
+
+/* --------Winner----- */
+const apiWinner = "http://localhost:5010/winners";
+
+export const addWinner = async (newWinner) => {
+    const fetchOptions = {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newWinner),
+    };
+    const response = await fetch(`${apiWinner}`, fetchOptions);
+   // const responseJS = await response.json();
+
+    document.dispatchEvent(new CustomEvent("winner"));
+
+    // const responseJson = await response.json()
+    // mainContainer.dispatchEvent(new CustomEvent("stateChanged"))
+    //return responseJS
+
+};
+
+
 /* ----------------------CATS---------------------- */
 /*-----cats------*/
 export const fetchCats = async () => {
@@ -44,23 +70,6 @@ export const fetchWDogs = async () => {
     return responseDogs;
 };
 /* ----------------------------------------------- */
-
-/* --------Winner----- */
-const apiWinner = "http://localhost:5010/winners";
-
-export const addWinner = async (newWinner) => {
-    const fetchOptions = {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newWinner),
-    };
-    const response = await fetch(`${apiWinner}`, fetchOptions);
-    const responseJS = await response.json(response);
-
-    document.dispatchEvent(new CustomEvent("winner"));
-};
 
 /* --------------------------------------------- */
 /* --------------------------------------------- */

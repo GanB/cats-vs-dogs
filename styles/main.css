@@ -103,7 +103,7 @@ body {
     padding: 10p;
 }
 
-.sideBorder {
+.sideBorder {/* sidebar */
     border: 2px solid #c7c0be;
     width: 650px;
     height: 100%;
