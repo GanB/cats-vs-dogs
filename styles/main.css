@@ -29,7 +29,7 @@ body {
     border-radius: 50px 0px 0px 0px;
     margin-top: 50px;
     position: relative;
-    z-index: 2;
+    /* z-index: 2; */
 }
 
 .topBorder {
