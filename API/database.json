@@ -18,12 +18,6 @@
       "type": "cat",
       "vote": 1,
       "id": 2
-    },
-    {
-      "url": "https://cdn2.thedogapi.com/images/1d4rlnsPt.jpg",
-      "type": "dog",
-      "vote": 1,
-      "id": 3
     }
   ]
 }
