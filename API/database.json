@@ -1,8 +1,8 @@
 {
   "scoreCard": [
     {
-      "countCat": 7,
-      "countDog": 7,
+      "countCat": 10,
+      "countDog": 9,
       "id": 1
     }
   ],
@@ -160,6 +160,84 @@
       "type": "dog",
       "votes": 0,
       "id": "HyWNfxc47"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/zGnoHL8B8.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "zGnoHL8B8"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/YrCbmNAvH.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "YrCbmNAvH"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/d60.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "d60"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/8vl.jpg",
+      "type": "cat",
+      "vote": 1,
+      "id": "bDKA37A"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/4r2.jpg",
+      "type": "cat",
+      "vote": 1,
+      "id": "Bvx5vEt"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/cOrWrVLic.jpg",
+      "type": "dog",
+      "vote": 1,
+      "id": "CtxHkIE"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/MTcwNjExMw.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "MTcwNjExMw"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/chQC0QwHn.jpg",
+      "type": "dog",
+      "votes": 0,
+      "id": "chQC0QwHn"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/MTUwNDQyMA.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "MTUwNDQyMA"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/7ie.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "7ie"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/8po.jpg",
+      "type": "cat",
+      "vote": 1,
+      "id": "rC4iQ2E"
+    },
+    {
+      "url": "https://cdn2.thecatapi.com/images/xD2mDDuDV.jpg",
+      "type": "cat",
+      "votes": 0,
+      "id": "xD2mDDuDV"
+    },
+    {
+      "url": "https://cdn2.thedogapi.com/images/HJHmix5NQ_1280.jpg",
+      "type": "dog",
+      "vote": 1,
+      "id": "-7Vd1W6"
     }
   ]
 }

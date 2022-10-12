@@ -3,7 +3,7 @@ import { fetchWCats } from "./mariana_main.js";
 import { fetchDogs } from "./mariana_main.js";
 import { fetchWDogs } from "./mariana_main.js";
 import { addWinner } from "./mariana_main.js";
-
+//import { renderSidebar } from "../sidebar.js";
 /* ------------------------------------------ */
 // mainContainer.addEventListener("click", clickEvent => {
 //     const ethanImgContainer = document.querySelector("#ethan-winner")
@@ -152,3 +152,4 @@ export const displayWDogs = async (winner) => {
   document.getElementById("sidebar_Mariana").innerHTML = html2;
 };
 displayWDogs();
+//renderSidebar();

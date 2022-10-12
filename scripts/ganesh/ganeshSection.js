@@ -67,3 +67,4 @@ ganeshSection.addEventListener("voteRecorded", (customEvent) => {
   //render sidebar js during state change
   renderSidebar();
 });
+
