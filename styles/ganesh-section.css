@@ -6,6 +6,19 @@
   /* z-index: 0; */
 }
 
+#sidebar,
+#sidebar__cat__Section,
+#sidebar__dog__Section {
+  background-color: rgb(136, 207, 209);
+}
+
+.sidebar__cat__Section__image,
+.sidebar__dog__Section__image {
+  height: 200px;
+  width: 200px;
+  object-fit: contain;
+}
+
 .ganesh__section__image__parent {
   display: flex;
   justify-content: space-around;
