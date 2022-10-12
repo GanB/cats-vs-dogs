@@ -5,8 +5,10 @@ import {
   getWinners,
 } from "./ganeshSectionDataAccess.js";
 
-//import sidebar js
+//import sidebar js and scorecard js
 import { renderSidebar } from "../sidebar.js";
+//import scorecard js
+import { renderScorecard } from "../scorecard.js";
 
 const ganeshSection = document.querySelector("#ganesh__section");
 
@@ -56,15 +58,16 @@ ganeshSection.addEventListener("click", async (imageClicked) => {
     const url = clickedId.pop();
     const type = clickedId.pop();
 
-    console.log({ url: url, type: type, vote: 1 });
+    // console.log({ url: url, type: type, vote: 1 });
     await recordVote({ url: url, type: type, vote: 1 });
   }
 });
 
 ganeshSection.addEventListener("voteRecorded", (customEvent) => {
-  console.log("vote recorded");
+  // console.log("vote recorded");
   renderGaneshSectionHtml();
   //render sidebar js during state change
   renderSidebar();
+  renderScorecard();
 });
 
