@@ -1,3 +1,4 @@
+import { renderScorecard } from "../scorecard.js"
 import { renderSidebar } from "../sidebar.js"
 import { getCatApiState, getDogApiState, getCatImageUrl, getDogImageUrl, fetchCat, fetchDog, postWinningPet, getScore, fetchScore } from "./ethanDataAccess.js"
 
@@ -58,4 +59,5 @@ renderAll()
 mainContainer.addEventListener("voteRender", event => {
    renderAll()
    renderSidebar()
+   renderScorecard()
 })
