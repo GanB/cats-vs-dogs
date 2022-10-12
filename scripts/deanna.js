@@ -1,4 +1,13 @@
-import { apiCat, apiDog, applicationState } from "./dataAccess.js"
+import { apiCat, apiDog } from "./dataAccess.js"
+
+const applicationState = {
+    scoreCard: [],
+    winners: [],
+    apiCat: [],
+    apiDog: []
+ }
+
+const mainContainer = document.querySelector("#deanna")
 
 const fetchCat = async () => {
     const dataFetch = await fetch(apiCat)
@@ -31,7 +40,7 @@ const renderCatToDOM = async () => {
     let URL = `${cat[0].url}`
     let TYPE = "cat"
     let VOTE = 0
-    let ID = `${cat[0].id}`
+    let ID = cat[0].id
 
     NewWinner = {
         url: URL,
@@ -51,10 +60,10 @@ const renderDogToDOM = async () => {
     applicationState.apiDog = dog[0].url
     
     let NewWinner = {}
-    let URL = `${dogs[0].url}`
+    let URL = `${dog[0].url}`
     let TYPE = "dog"
-    let VOTE = 0
-    let ID = `${dog[0].id}`
+    let VOTE = 1
+    let ID = dog[0].id
 
     NewWinner = {
         url: URL,
@@ -67,16 +76,6 @@ const renderDogToDOM = async () => {
 }
 
 renderDogToDOM()
-
-document.addEventListener("click", (event) => {
-    if (event.target.id === 'voteCat') {
-        document.getElementById('sidebar').innerHTML += `<img class="image" src="${applicationState.apiCat}">`
-        renderCatToDOM()
-    } else if (event.target.id === 'voteDog') {
-        document.getElementById('sidebar').innerHTML += `<img class="image" src="${applicationState.apiDog}">`
-        renderDogToDOM()
-    } 
-})
 
 const apiWinner = "http://localhost:5010/winners";
 
@@ -92,5 +91,59 @@ const addWinner = async (newWinner) => {
     const responseJS = await response.json(response);
     document.dispatchEvent(new CustomEvent("winner"));
     return responseJS
-};
+}
 
+document.addEventListener("click", (event) => {
+    if (event.target.id === 'voteCat') {
+        document.getElementById('sidebar').innerHTML += `<img class="image" src="${applicationState.apiCat}">`
+        renderCatToDOM()
+    } else if (event.target.id === 'voteDog') {
+        document.getElementById('sidebar').innerHTML += `<img class="image" src="${applicationState.apiDog}">`
+        renderDogToDOM()
+    } 
+})
+
+const scoreTally = async (vote) => {
+    const PATCH = {
+       method: "PATCH",
+       headers: {
+          "Content-Type": "application/json"
+       },
+       body: JSON.stringify(vote)
+    }
+    const mainContainer = document.querySelector('#deanna')
+    const response = await fetch(`${scoreAPI}/1`, PATCH)
+    const responseJSON = await response.json()
+    mainContainer.dispatchEvent(new CustomEvent("voteRender"))
+    return responseJSON
+ }
+
+ const scoreAPI = `http://localhost:5010/scoreCard`
+
+ const fetchScore = async () => {
+    const data = await fetch(scoreAPI)
+    const scoreCardData = await data.json()
+    applicationState.scoreCard = scoreCardData
+ }
+
+ fetchScore()
+
+const getScore = async (type) => {
+    for(const score of applicationState.scoreCard) {
+       if (type === "cat") {
+          let catVote = score.countCat
+          catVote++
+          let catType = {countCat: catVote}
+          await scoreTally(catType)
+       } else if (type === "dog") {
+         let dogVote = score.countDog
+         dogVote++
+         let dogType = {countDog: dogVote}
+         await scoreTally(dogType)
+       }
+    }
+ }
+
+mainContainer.addEventListener("voteRender", event => {
+    getScore()
+ })
