@@ -70,3 +70,4 @@ ganeshSection.addEventListener("voteRecorded", (customEvent) => {
   renderSidebar();
   renderScorecard();
 });
+

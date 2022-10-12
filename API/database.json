@@ -1,10 +1,24 @@
 {
   "scoreCard": [
     {
-      "countCat": 0,
-      "countDog": 0,
+      "countCat": 10,
+      "countDog": 9,
       "id": 1
     }
   ],
-  "winners": []
+  "winners": [
+    {
+      "url": "https://cdn2.thedogapi.com/images/rJifQpT4m.gif",
+      "type": "dog",
+      "votes": 0,
+      "id": "rJifQpT4m"
+    },
+    {
+      "dogid": "Vh2yFrSLm",
+      "type": "dog",
+      "vote": 1,
+      "url": "https://cdn2.thedogapi.com/images/Vh2yFrSLm.jpg",
+      "id": "wvLN-fg"
+    }
+  ]
 }
