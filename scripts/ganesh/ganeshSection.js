@@ -5,6 +5,7 @@ import {
   getWinners,
 } from "./ganeshSectionDataAccess.js";
 
+//import sidebar js
 import { renderSidebar } from "../sidebar.js";
 
 const ganeshSection = document.querySelector("#ganesh__section");
@@ -63,5 +64,6 @@ ganeshSection.addEventListener("click", async (imageClicked) => {
 ganeshSection.addEventListener("voteRecorded", (customEvent) => {
   console.log("vote recorded");
   renderGaneshSectionHtml();
+  //render sidebar js during state change
   renderSidebar();
 });
