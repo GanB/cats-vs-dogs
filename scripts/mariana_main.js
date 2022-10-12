@@ -22,12 +22,12 @@ export const fetchCats = async () => {
 };
 
 /*-----Winner--cats------*/
-export const fetchWCats = async () => {
-    const dataFetch = await fetch(`${apiWinner}`);
-    const responseCats = await dataFetch.json();
-    console.log(responseCats);
-    return responseCats;
-};
+// export const fetchWCats = async () => {
+//     const dataFetch = await fetch(`${apiWinner}`);
+//     const responseCats = await dataFetch.json();
+//     console.log(responseCats);
+//     return responseCats;
+// };
 /* ----------------------DOGS---------------------- */
 /*-----dogs------*/
 export const fetchDogs = async () => {
@@ -38,11 +38,11 @@ export const fetchDogs = async () => {
     return responseDogs;
 };
 /*-----Winner--dogs------*/
-export const fetchWDogs = async () => {
-    const dataFetch = await fetch(`${apiWinner}`);
-    const responseDogs = await dataFetch.json();
-    return responseDogs;
-};
+// export const fetchWDogs = async () => {
+//     const dataFetch = await fetch(`${apiWinner}`);
+//     const responseDogs = await dataFetch.json();
+//     return responseDogs;
+// };
 /* ----------------------------------------------- */
 /* --------Winner----- */
 const apiWinner = "http://localhost:5010/winners";
