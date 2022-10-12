@@ -52,12 +52,12 @@ export const recordVote = async (vote) => {
 export const updateScorecard = async (type) => {
   const getScorecard = await fetch(scoreCardAPI);
   const existingScorecard = await getScorecard.json();
-  console.log(existingScorecard[0]);
+  // console.log(existingScorecard[0]);
   let catVotes = parseInt(existingScorecard[0].countCat);
   let dogVotes = parseInt(existingScorecard[0].countDog);
-  console.log(type);
+  // console.log(type);
   type === "cat" ? ++catVotes : ++dogVotes;
-  console.log({ catVotes: catVotes, dogVotes: dogVotes });
+  // console.log({ catVotes: catVotes, dogVotes: dogVotes });
 
   const putOptions = {
     method: "PUT",

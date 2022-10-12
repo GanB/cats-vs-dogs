@@ -4,7 +4,7 @@ const sidebar = document.querySelector("#sidebar");
 
 export const renderSidebar = async () => {
   const winners = await getWinners();
-  console.log(winners);
+  //   console.log(winners);
   let sidebarCatsSectionHtml = `<section id="sidebar__cat__Section">`;
   let sidebarDogsSectionHtml = `<section id="sidebar__dog__Section">`;
   for (const winner of winners) {
